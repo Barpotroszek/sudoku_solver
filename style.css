@@ -1,0 +1,56 @@
+:root {
+    --fields-border: #7bff00;
+    --blue: #0051ff;
+}
+
+body {
+    background-color: black;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#sudoku{
+    box-sizing: border-box;
+    border: 5px solid var(--blue);
+}
+
+.fields{
+    /* margin: 2px;*/ 
+    width: 30px;
+    height: 30px;
+    border: 1.5px solid var(--fields-border);
+    background-color: unset;
+    color: white;
+    text-align: center;
+}
+
+.fields:nth-child(3),
+.fields:nth-child(6) {
+    border-right: 3px solid var(--blue);
+}
+
+.rowDiv:nth-child(3) > .fields,
+.rowDiv:nth-child(6) > .fields{
+    border-bottom: 3px solid var(--blue);
+}
+
+.fields:nth-child(4),
+.fields:nth-child(7) {
+    border-left: 3px solid var(--blue);
+}
+
+.rowDiv:nth-child(4) > .fields,
+.rowDiv:nth-child(7) > .fields{
+    border-top: 3px solid var(--blue);
+}
+
+#button_row {
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+}
+
